@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Numbers e Math</title>
+</head>
+<body>
+	<h1>O seu numero é: <span id="meuNumero"></span></h1>
+
+	<div id="texto"></div>
+	<div id="rQ"></div>
+	<div id="inteiro"></div>
+	<div id="nan"></div>
+	<div id="paraCima"></div>
+	<div id="paraBaixo"></div>
+	<div id="duasCasas"></div>
+
+	<script>
+
+		const numero = Number(prompt("Digite um número:"));
+		const numeroTitulo = document.getElementById("meuNumero")
+		const texto = document.getElementById("texto");
+		const rQ = document.getElementById("rQ");
+		const inteiro = document.getElementById("inteiro");
+		const nan = document.getElementById("nan");
+		const paraCima = document.getElementById("paraCima");
+		const paraBaixo = document.getElementById("paraBaixo");
+		const duasCasas = document.getElementById("duasCasas");
+
+		numeroTitulo.innerHTML = numero;
+		texto.innerHTML = `<p>Seu número + 2 é: ${2 + numero}</p>`;
+		rQ.innerHTML = `<p>A raiz quadrada de: ${numero} é ${Math.sqrt(numero)}</p>`;
+		inteiro.innerHTML = `<p>${numero} é um numero inteiro: ${Number.isInteger(numero)}</p>`;
+		nan.innerHTML = `<p>${numero} é um número NAN: ${Number.isNaN(numero)}<p>`;
+		duasCasas.innerHTML = `<p>Com duas casas decimais: ${numero.toFixed(2)}</p>`;
+		paraCima.innerHTML = `<p>Arredondado para Cima: ${Math.ceil(numero)}</p>`;
+		paraBaixo.innerHTML = `<p>Arredondado para Baixo: ${Math.floor(numero)}</p>`;
+
+	</script>
+</body>
+</html>

@@ -18,10 +18,12 @@ const pessoa = {
   },
 }
 
+console.log(pessoa);
+
 /** Atribuição Via Desestruturação por Objeto */
 const { NomeCompleto: { nome, sobrenome } } = pessoa;
 const { profissao: { cargo } } = pessoa;
-const { endereco: { cep, numero, rua, bairro } } = pessoa;
+const { endereco: { cidade, uf } } = pessoa;
 
-console.log(`Nome: ${nome}, Cargo: ${cargo}`);
-console.log(`cep: ${cep}, número: ${numero}, rua: ${rua}`);
+console.log(`Nome: ${nome},   sobrenome: ${sobrenome}`);
+console.log(`Cidade: ${cidade}, Estado: ${uf}`);

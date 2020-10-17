@@ -1,0 +1,43 @@
+<script>
+  function Produtos(preco, nome) {
+    this.preco = preco;
+    this.nome = nome;
+  }
+
+  Produtos.prototype.desconto = function(percentual) {
+    const valor = this.preco = this.preco - (this.preco * (percentual / 100));
+    return valor;
+  }
+
+  Produtos.prototype.aumentaPreco = function(percentual) {
+    const valor = this.preco = this.preco + (this.preco * (percentual / 100));
+    return valor
+  }
+
+  const p1 = new Produtos(10, 'Coca-cola');
+  p1.aumentaPreco(47);
+  console.log(p1);
+
+  const p2 = { preco: 3, nome: 'Sukita-laranja' }
+
+  Object.setPrototypeOf(p2, Produtos.prototype);
+  p2.desconto(45)
+  console.log(p2);
+
+  const p3 = Object.create(Produtos.prototype, {
+    preco: {
+      writable: true,
+      configurable: true,
+      enumerable: true,
+      value: 22,
+    },
+    nome: {
+      writable: true,
+      configurable: true,
+      enumerable: true,
+      value: 'Sabão em pó'}
+  });
+
+  p3.desconto(50)
+  console.log(p3);
+</script>

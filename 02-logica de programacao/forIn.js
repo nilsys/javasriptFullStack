@@ -18,7 +18,7 @@ const pessoa = {
   estadoCivil: 'Namorando',
 }
 
-for (let i in pessoa) {
-  console.log(pessoa[i])
+for (let i in pessoa.nomeCompleto) {
+  console.log(pessoa.nomeCompleto[i])
 }
 

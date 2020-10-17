@@ -1,0 +1,21 @@
+<script>
+  function Pessoa(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+    // this.pessoa = () => {
+    //   return `Nome: ${this.pessoa}, Idade: ${this.idade}`;
+    // }
+  }
+
+  Pessoa.prototype.pessoa = function() {
+    return `Nome: ${this.nome}, idade: ${this.idade}`
+  }
+
+  const p1 = new Pessoa('Isaias', 21);
+  const p2 = new Pessoa('Janaina', 41);
+
+  console.dir(p1);
+  console.log(p1.pessoa());
+  console.dir(p2);
+
+</script>

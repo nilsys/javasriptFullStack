@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Produto
+    // Caneca - Cor
+    // copo -  Ml
+
+    function Produto(nome, preco) {
+      this.nome = nome;
+      this.preco = preco;
+    }
+
+    Produto.prototype.aumento = function(quantia) {
+      return quantia += preco;
+    }
+    Produto.prototype.desconto = function(quantia) {
+      return quantia -= preco;
+    }
+
+    function Caneca(nome, preco, cor) {
+      Produto.call(this, nome, preco);
+      this.cor = cor;
+    }
+    function Copo(nome, preco, ml) {
+      Produto.call(this, nome, preco)
+      this.ml = ml;
+    }
+
+    Caneca.prototype = Object.create(Produto.prototype);
+    Caneca.prototype.constructor = Caneca;
+
+    Copo.prototype = Object.create(Produto.prototype);
+    Copo.prototype.constructor = Copo;
+
+    const caneca = new Caneca('Caneca de time', 4, 'Branca');
+    console.log(caneca);
+    const copo = new Copo('Copaza', 1.99, '200ml');
+    console.log(copo);
+  </script>
+</body>
+</html>

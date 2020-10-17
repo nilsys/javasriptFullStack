@@ -6,9 +6,9 @@ function mostraNomeIsa() {
   console.log(nome);
 }
 
-function mostraOutroNome(params) {
+function mostraOutroNome() {
   const nome = 'OutroNome'
-  console.log(nome)
+  return nome
 }
 mostraNomeIsa();
-mostraOutroNome();
+console.log(mostraOutroNome());

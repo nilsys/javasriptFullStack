@@ -10,4 +10,4 @@ function conta(operador, acomulador, ...numeros) {
   console.log(acomulador)
 }
 
-conta('/', 90, 100,9,45,4,5,6);
+conta('*', 90, 100,9,45,4,5,6);

@@ -1,7 +1,10 @@
 {
   "name": "08-JsES6Modules",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
+  "scripts": {
+    "start": "babel main.js --out-file public/bundle.js --presets=@babel/env -w"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.12.1",

@@ -1,0 +1,31 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch": "webpack --watch",
+    "start": "webpack serve --port 8080",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "bootstrap": "^5.0.0-alpha2",
+    "css-loader": "^5.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "postcss-loader": "^4.0.4",
+    "sass": "^1.28.0",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.3.2",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "popper.js": "^1.16.1",
+    "uuid": "^8.3.1"
+  }
+}
